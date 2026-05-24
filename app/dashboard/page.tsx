@@ -215,85 +215,34 @@ const [loading, setLoading] =
 
   // AI INSIGHTS
 
-  const insights = []
-  const monthlyInsights: string[] = []
+const insights: string[] = []
+const monthlyInsights: string[] = []
 
-// Flexible spending too high
-if (
-  totalExpenses - essentialExpenses >
-  totalIncome * 0.4
-) {
+const expenseGap = totalExpenses - essentialExpenses
+
+if (expenseGap > totalIncome * 0.4) {
   monthlyInsights.push(
     'Your flexible spending is consuming a large portion of your income.'
   )
 }
 
-// Healthy savings opportunity
-if (
-  recommendedSavings >
-  totalIncome * 0.2
-) {
+if (recommendedSavings > totalIncome * 0.2) {
   monthlyInsights.push(
     'You are financially positioned to increase your savings rate.'
   )
 }
 
-// Expense pressure
-if (
-  totalExpenses > totalIncome
-) {
+if (totalExpenses > totalIncome) {
   monthlyInsights.push(
     'Your spending currently exceeds your income.'
   )
 }
 
-// Strong financial control
-if (
-  totalExpenses <
-  totalIncome * 0.5
-) {
+if (totalExpenses < totalIncome * 0.5) {
   monthlyInsights.push(
     'Your monthly spending habits are currently well managed.'
   )
 }
-
-  // Overspending warning
-  if (totalExpenses > totalIncome * 0.8) {
-    insights.push(
-      'Your expenses are consuming most of your income.'
-    )
-  }
-
-  // Healthy savings flexibility
-  if (safeToSpend > totalIncome * 0.3) {
-    insights.push(
-      'You currently have strong financial flexibility.'
-    )
-  }
-
-  // Essential spending too high
-  if (essentialExpenses > totalIncome * 0.6) {
-    insights.push(
-      'Essential expenses are taking a large portion of your income.'
-    )
-  }
-
-  // Good financial stability
-  if (
-    totalIncome > 0 &&
-    totalExpenses < totalIncome * 0.5
-  ) {
-    insights.push(
-      'Your spending habits are currently well controlled.'
-    )
-  }
-
-  // Negative safe-to-spend
-  if (safeToSpend < 0) {
-    insights.push(
-      'You may need to reduce spending immediately.'
-    )
-  }
 
   // FINANCIAL SCORE
 
