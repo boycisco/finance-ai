@@ -216,7 +216,7 @@ const [loading, setLoading] =
   // AI INSIGHTS
 
   const insights = []
-  const monthlyInsights = []
+  const monthlyInsights: string[] = []
 
 // Flexible spending too high
 if (
