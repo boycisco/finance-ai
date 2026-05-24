@@ -216,7 +216,7 @@ const [loading, setLoading] =
   // AI INSIGHTS
 
 const insights: string[] = []
-const monthlyInsights: string[] = []
+const monthlyInsights: string[] = new Array<string>()
 
 const expenseGap = totalExpenses - essentialExpenses
 
