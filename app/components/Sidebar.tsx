@@ -165,12 +165,12 @@ export default function Sidebar() {
         : 'dark'
     )
   }
-  className="w-full bg-zinc-800 hover:bg-zinc-700 text-white p-3 rounded-xl mb-3"
+  className="w-full bg-zinc-800 hover:bg-zinc-700 text-white p-3 rounded-xl mb-3 transition"
 >
 
   {theme === 'dark'
-    ? '☀️ Light Mode'
-    : '🌙 Dark Mode'}
+    ? 'Light Mode'
+    : 'Dark Mode'}
 
 </button>
 
